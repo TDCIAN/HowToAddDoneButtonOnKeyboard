@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         textField.addDoneButtonOnKeyboard()
+        
+        textView.addDoneButtonOnKeyboard()
     }
 
 
@@ -32,8 +34,8 @@ extension UITextField {
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         // MARK: 버튼의 이름과 색상을 바꾸고 싶다면 아래 title과 tintColor를 바꿔보세요!
-        let done: UIBarButtonItem = UIBarButtonItem(title: "띠용", style: .done, target: self, action: #selector(self.doneButtonAction))
-        done.tintColor = .systemOrange
+        let done: UIBarButtonItem = UIBarButtonItem(title: "완료", style: .done, target: self, action: #selector(self.doneButtonAction))
+        done.tintColor = .black
         // ==============================================================
         let items = [flexSpace, done]
         doneToolbar.items = items
@@ -57,7 +59,7 @@ extension UITextView {
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let done: UIBarButtonItem = UIBarButtonItem(title: "완료", style: .done, target: self, action: #selector(self.doneButtonAction))
-        done.tintColor = .black
+        done.tintColor = .systemBlue
         let items = [flexSpace, done]
         doneToolbar.items = items
         doneToolbar.sizeToFit()
