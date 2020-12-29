@@ -24,16 +24,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QoN-TU-FPe">
+                                <rect key="frame" x="30" y="278" width="354" height="177"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="QoN-TU-FPe" firstAttribute="top" secondItem="Zvt-AC-Udb" secondAttribute="bottom" constant="50" id="AuD-8f-ySM"/>
                             <constraint firstItem="Zvt-AC-Udb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Fzl-Fw-wLj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QoN-TU-FPe" secondAttribute="trailing" constant="30" id="PBo-w8-wX0"/>
                             <constraint firstItem="Zvt-AC-Udb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YTk-Vt-7pv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QoN-TU-FPe" secondAttribute="bottom" constant="407" id="v5y-ex-jYY"/>
+                            <constraint firstItem="QoN-TU-FPe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="zol-Sl-Jg3"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textField" destination="Zvt-AC-Udb" id="my5-42-Lvo"/>
+                        <outlet property="textView" destination="QoN-TU-FPe" id="Km9-Dp-OPC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -42,6 +55,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
