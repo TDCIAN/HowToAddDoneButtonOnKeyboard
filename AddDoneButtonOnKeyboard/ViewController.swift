@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  AddDoneButtonOnKeyboard
 //
-//  Created by APPLE on 2020/12/29.
+//  Created by TDCIAN on 2020/12/29.
 //
 
 import UIKit
@@ -29,8 +29,10 @@ extension UITextField {
         doneToolbar.barStyle = .default
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let done: UIBarButtonItem = UIBarButtonItem(title: "완료", style: .done, target: self, action: #selector(self.doneButtonAction))
-        done.tintColor = .black
+        // MARK: 버튼의 이름과 색상을 바꾸고 싶다면 아래 title과 tintColor를 바꿔보세요!
+        let done: UIBarButtonItem = UIBarButtonItem(title: "띠용", style: .done, target: self, action: #selector(self.doneButtonAction))
+        done.tintColor = .systemOrange
+        // ==============================================================
         let items = [flexSpace, done]
         doneToolbar.items = items
         doneToolbar.sizeToFit()
